@@ -280,12 +280,3 @@ div.mainbtn-wrap ul li a span {
     -webkit-transform: rotate(135deg);
   }
   
-  .up {
-    transform: rotate(-135deg);
-    -webkit-transform: rotate(-135deg);
-  }
-  
-  .down {
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-  }
