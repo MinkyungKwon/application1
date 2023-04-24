@@ -34,8 +34,8 @@ html {
 
 }
 
-.down {
-    background-color:#f5f5f5;
+.scrolldown {
+    background-color:#f5f5f5!important;
     -webkit-transition-duration:0.4s;
     -webkit-transition-timing-function:ease;
     transition-duration:0.4s;
