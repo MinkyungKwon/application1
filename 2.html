@@ -1,63 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
 
-    <style>
-        html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-        img{
-            width: 100%;;
-        }
-    </style>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<link rel="stylesheet" href="css/normal.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script>
+		$(document).ready(function () {
+			let today = new Date();
+
+			let year = today.getFullYear(); // 년도
+			let month = today.getMonth() + 1;  // 월
+			let date = today.getDate();  // 날짜 
+
+			let temp_html = `${year}-${month}-${date} `
+
+			console.log(temp_html);
+			$('#date').append(temp_html);
+
+			temp_html = ``
+
+
+		}); 
+	</script>
 </head>
+
 <body>
-        <a href="3.html"> 
-        <img src="img/3.png" alt="">
-        </a>
+	<!-- <a href="2.html"> 
+        <img src="img/2.png" alt="">
+        </a> -->
+
+
+	<div class="main-container">
+		<div class="top-nav sub">
+			<div><img src="img/nav_top/navtop_1_scroll.jpg" alt=""></div>
+			<div><img src="img/nav_top/navtop_3.jpg" alt=""></div>
+		</div>
+		<div class="top-container">
+			<div class="">
+				<div class="first-wrap sub">
+					<h1 class="sub">채민철님, 안녕하세요!</h1>
+				</div>
+			</div>
+		</div>
+		<div class="sub-card-wrap">
+			<ul>
+				<li><a href=""></a></li>
+				<li><a href=""></a></li>
+				<li><a href=""></a></li>
+			</ul>
+			<div>
+				<div>
+					<div>조회기준일 : <span id="date"></span></div>
+				</div>
+				<div>
+					<div>
+						<div>
+							<div>
+								카드사 <span class="text-primary">3</span>, 카드<span class="text-primary">3</span>
+							</div>
+							<div>
+								서비스 가능 카드사 <img src="img/info.png" alt="">
+							</div>
+						</div>
+						<div>
+							<a class="btn btn-secondary" href=""></a>
+						</div>
+					</div>
+				</div>
+				<ul>
+					<li>
+						<a href="">
+							<div>
+							<div></div>
+							<div></div>
+							<div>KB국민카드<i class="arrow right"></i></div>
+						</div>
+						<div>
+							<span>1</span>건 
+						</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+
+
+		<!-- 하단 네비게이션 -->
+		<div class="bottom-nav">
+			<div><a href=""><img src="img/nav_bottom/navbar_1.jpg" alt=""></a></div>
+			<div><a href=""><img src="img/nav_bottom/navbar_2_on.jpg" alt=""></a></div>
+			<div><a href=""><img src="img/nav_bottom/navbar_3.jpg" alt=""></a></div>
+			<div><a href=""><img src="img/nav_bottom/navbar_4.jpg" alt=""></a></div>
+			<div><a href=""><img src="img/nav_bottom/navbar_5.jpg" alt=""></a></div>
+		</div>
+
+	</div>
 </body>
+
 </html>
