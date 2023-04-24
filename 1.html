@@ -1,20 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 	<link rel="stylesheet" href="css/normal.css">
 	<link rel="stylesheet" href="css/style.css">
+	<script>
+		$(document).ready(function () {
+			let today = new Date();
 
+			let year = today.getFullYear(); // 년도
+			let month = today.getMonth() + 1;  // 월
+			let date = today.getDate();  // 날짜 
+
+			let temp_html = `${year}-${month}-${date} `
+
+			console.log(temp_html);
+			$('#date').append(temp_html);
+
+			temp_html = ``
+
+
+
+			var $header = $('.top-nav'); //헤더를 변수에 넣기
+			var $page = $('.page-start'); //색상이 변할 부분
+			var $window = $(window);
+			var pageOffsetTop = $page.offset().top;//색상 변할 부분의 top값 구하기
+
+			$window.resize(function () { //반응형을 대비하여 리사이즈시 top값을 다시 계산
+				pageOffsetTop = $page.offset().top;
+			});
+
+			$window.on('scroll', function () { //스크롤시
+				var scrolled = $window.scrollTop() >= pageOffsetTop; //스크롤된 상태; true or false
+				$header.toggleClass('down', scrolled); //클래스 토글
+			});
+		}); 
+	</script>
 </head>
+
 <body>
-        <!-- <a href="2.html"> 
+	<!-- <a href="2.html"> 
         <img src="img/2.png" alt="">
         </a> -->
 
-	
+
 	<div class="main-container">
 		<div class="top-nav">
 			<div><img src="img/nav_top/navtop_1.jpg" alt=""></div>
@@ -24,45 +59,45 @@
 			<div class="">
 				<div class="first-wrap">
 					<h1>채민철님, 안녕하세요!</h1>
-					<p>조회 기준일 : <span></span></p>
+					<p>조회 기준일 : <span id="date"></span></p>
 					<div>
 						<img src="img/alarm.jpg" alt="">
 						<span>하나카드의 내카드한눈에 업무 일시중단 안내(4/15)</span>
 					</div>
 				</div>
-				<div class="mainbtn-wrap">
+				<div class="mainbtn-wrap" id="change">
 					<ul>
 						<li><a href="">
-							<div><img src="img/main_1.jpg" alt=""></div>
-							<span>
-								내 계좌 <br/>
-								지급정지
-							</span>
-						</a></li>
+								<div><img src="img/main_1.jpg" alt=""></div>
+								<span>
+									내 계좌 <br />
+									지급정지
+								</span>
+							</a></li>
 						<li><a href="">
-							<div><img src="img/main_2.jpg" alt=""></div>
-							<span>
-								카드 포인트 <br/>
-								현금화
-							</span>
-						</a></li>
+								<div><img src="img/main_2.jpg" alt=""></div>
+								<span>
+									카드 포인트 <br />
+									현금화
+								</span>
+							</a></li>
 						<li><a href="">
-							<div><img src="img/main_3.jpg" alt=""></div>
-							<span>
-								내 오픈뱅킹 <br/>
-								한눈에
-							</span>
-						</a></li>
+								<div><img src="img/main_3.jpg" alt=""></div>
+								<span>
+									내 오픈뱅킹 <br />
+									한눈에
+								</span>
+							</a></li>
 						<li><a href="">
-							<div><img src="img/main_4.jpg" alt=""></div>
-							<span>
-								내 투자성향 <br/>
-								한눈에
-							</span>
-						</a></li>
+								<div><img src="img/main_4.jpg" alt=""></div>
+								<span>
+									내 투자성향 <br />
+									한눈에
+								</span>
+							</a></li>
 					</ul>
 				</div>
-				<div class="main-card">
+				<div class="main-card page-start">
 					<h2>자주쓰는 계좌 <span><img src="img/info.png" alt=""></span></h2>
 					<div class="card-container">
 						<div>자주쓰는 계좌를 선택해 주세요. <span>최대 10개</span>까지 선택이 가능합니다.</div>
@@ -73,16 +108,48 @@
 		</div>
 		<div class="main-card-wrap">
 
+			<div class="main-card">
+				<h2>자주쓰는 카드 <span><img src="img/info.png" alt=""></span></h2>
+				<div class="card-container">
+					<div>자주쓰는 카드를 선택해 주세요. <span class="text-primary">최대 10개</span>까지 선택이 가능합니다.</div>
+					<a class="btn btn-primary" href="">조회하기</a>
+				</div>
+			</div>
+			<div class="main-card">
+				<h2>대출내역</span></h2>
+				<div class="card-container">
+					<div>대출계좌를 확인하시겠습니까?</div>
+					<a class="btn btn-primary" href="">조회하기</a>
+				</div>
+			</div>
+			<div class="main-card">
+				<h2>휴먼예금/보험금</h2>
+				<div class="card-container">
+					<div>휴먼예금 및 보험금을 </br>확인하시겠습니까?</div>
+					<a class="btn btn-primary" href="">조회하기</a>
+				</div>
+			</div>
+			<div class="main-card">
+				<h2>ATM/지점</h2>
+				<div class="card-container">
+					<div>가까운 ATM/지점을 </br>찾아보시겠습니까?</div>
+					<a class="btn btn-primary" href="">조회하기</a>
+				</div>
+			</div>
 		</div>
-		
-	<div class="bottom-nav">
-		<div><a href=""><img src="img/nav_bottom/navbar_1_on.jpg" alt=""></a></div>
-		<div><a href=""><img src="img/nav_bottom/navbar_2.jpg" alt=""></a></div>
-		<div><a href=""><img src="img/nav_bottom/navbar_3.jpg" alt=""></a></div>
-		<div><a href=""><img src="img/nav_bottom/navbar_4.jpg" alt=""></a></div>
-		<div><a href=""><img src="img/nav_bottom/navbar_5.jpg" alt=""></a></div>
-	</div>
+
+
+
+		<!-- 하단 네비게이션 -->
+		<div class="bottom-nav">
+			<div><a href="1.html"><img src="img/nav_bottom/navbar_1_on.jpg" alt=""></a></div>
+			<div><a href="2.html"><img src="img/nav_bottom/navbar_2.jpg" alt=""></a></div>
+			<div><a href=""><img src="img/nav_bottom/navbar_3.jpg" alt=""></a></div>
+			<div><a href=""><img src="img/nav_bottom/navbar_4.jpg" alt=""></a></div>
+			<div><a href=""><img src="img/nav_bottom/navbar_5.jpg" alt=""></a></div>
+		</div>
 
 	</div>
 </body>
+
 </html>
