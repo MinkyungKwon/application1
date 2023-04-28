@@ -6,10 +6,29 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+		crossorigin="anonymous"></script>
 
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+		integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="stylesheet" href="css/normal.css">
 	<link rel="stylesheet" href="css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
 	<script>
 		$(document).ready(function () {
 			let today = new Date();
@@ -28,6 +47,9 @@
 
 		}); 
 	</script>
+	<style>
+
+	</style>
 </head>
 
 <body>
@@ -39,54 +61,114 @@
 	<div class="main-container">
 		<div class="top-nav sub">
 			<div><img src="img/nav_top/navtop_1_scroll.jpg" alt=""></div>
+			<div>
+				<h1 class="sub">내 계좌 한눈에</h1>
+			</div>
 			<div><img src="img/nav_top/navtop_3.jpg" alt=""></div>
 		</div>
 		<div class="top-container">
-			<div class="">
-				<div class="first-wrap sub">
-					<h1 class="sub">채민철님, 안녕하세요!</h1>
+			<div class="bg-white">
+				<div class="py-3">
 				</div>
 			</div>
 		</div>
-		<div class="sub-card-wrap">
-			<ul>
-				<li><a href=""></a></li>
-				<li><a href=""></a></li>
-				<li><a href=""></a></li>
+		<div class="sub-card-wrap bg-white border-0">
+			<!-- Nav tabs -->
+			<ul class="nav nav-tabs" id="myTab" role="tablist">
+				<li class="nav-item" role="presentation">
+					<a class="nav-link py-3 active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
+						type="button" role="tab" aria-controls="home" aria-selected="true">은행권</a>
+				</li>
+				<li class="nav-item" role="presentation">
+					<a ton class="nav-link py-3" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile"
+						type="button" role="tab" aria-controls="profile" aria-selected="false">제2금융권</a>
+				</li>
+				<li class="nav-item" role="presentation">
+					<a class="nav-link py-3" id="messages-tab" data-bs-toggle="tab" data-bs-target="#messages"
+						type="button" role="tab" aria-controls="messages" aria-selected="false">증권사</a>
+				</li>
 			</ul>
-			<div>
-				<div>
-					<div>조회기준일 : <span id="date"></span></div>
-				</div>
-				<div>
+
+			<!-- Tab panes -->
+			<div class="tab-content">
+				<div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+
 					<div>
-						<div>
-							<div>
-								카드사 <span class="text-primary">3</span>, 카드<span class="text-primary">3</span>
-							</div>
-							<div>
-								서비스 가능 카드사 <img src="img/info.png" alt="">
+						<div class="date-wrap">
+							<div>조회기준일 : <span id="date"></span></div>
+						</div>
+						<div class="px-4 py-3 border-bottom">
+							<div class="row">
+								<div class="col-6">
+									<div class="border rounded p-2 px-4 text-primary">은행권 계좌 <br />한번에 확인하기 <i
+											class="arrow right border-primary"></i></div>
+								</div>
+								<div class="col-6">
+									<div class="border rounded p-2 px-4 text-primary">오픈뱅킹 <br />한눈에 확인하기 <i
+											class="arrow right border-primary"></i></div>
+								</div>
 							</div>
 						</div>
-						<div>
-							<a class="btn btn-secondary" href=""></a>
+						<ul class="m-0 p-0">
+							<li class="info-wrap border-bottom p-4">
+								<a href="">
+									<div class="">
+										<div><i class="fa-solid fa-star text-gray-300"></i></div>
+										<div class=""><img src="img/kb.png" alt=""></div>
+										<div>KB국민카드 </div>
+									</div>
+									<div class="">
+										<span class="text-primary fs-2 fw-bolder px-2">1</span>건 <i
+											class="mx-2 arrow right"></i>
+									</div>
+								</a>
+							</li>
+							<li class="info-wrap border-bottom p-4">
+								<a href="">
+									<div class="">
+										<div><i class="fa-solid fa-star text-gray-300"></i></div>
+										<div class=""><img src="img/kakao.png" alt=""></div>
+										<div>카카오 뱅크 </div>
+									</div>
+									<div class="">
+										<span class="text-primary fs-2 fw-bolder px-2">1</span>건 <i
+											class="mx-2 arrow right"></i>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+					<div>
+						<div class="date-wrap">
+							<div>조회기준일 : <span id="date"></span></div>
+						</div>
+						<div class="none_pg">
+							<div>
+								<img src="img/no_pg.png" alt="">
+								<div>
+									조회된 제2금융권 계좌 <br />내역이 없습니다.
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
-				<ul>
-					<li>
-						<a href="">
+				<div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab" tabindex="0">
+					<div>
+						<div class="date-wrap">
+							<div>조회기준일 : <span id="date"></span></div>
+						</div>
+						<div class="none_pg">
 							<div>
-							<div></div>
-							<div></div>
-							<div>KB국민카드<i class="arrow right"></i></div>
+								<img src="img/no_pg.png" alt="">
+								<div>
+									조회된 증권사 계좌 <br />내역이 없습니다.
+								</div>
+							</div>
 						</div>
-						<div>
-							<span>1</span>건 
-						</div>
-						</a>
-					</li>
-				</ul>
+					</div>
+				</div>
 			</div>
 		</div>
 
@@ -94,7 +176,7 @@
 
 		<!-- 하단 네비게이션 -->
 		<div class="bottom-nav">
-			<div><a href=""><img src="img/nav_bottom/navbar_1.jpg" alt=""></a></div>
+			<div><a href="1.html"><img src="img/nav_bottom/navbar_1.jpg" alt=""></a></div>
 			<div><a href=""><img src="img/nav_bottom/navbar_2_on.jpg" alt=""></a></div>
 			<div><a href=""><img src="img/nav_bottom/navbar_3.jpg" alt=""></a></div>
 			<div><a href=""><img src="img/nav_bottom/navbar_4.jpg" alt=""></a></div>
