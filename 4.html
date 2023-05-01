@@ -61,126 +61,117 @@
 			<div><img src="img/nav_top/navtop_3.jpg" alt=""></div>
 		</div>
 		<div class="top-container">
-			<div class="px-3 pt-3 bg-white">
-				<h1 class="sub">더보기</h1>
+			<div class="p-3 bg-white">
+				<h1 class="sub">내 자동이체 한눈에</h1>
 			</div>
 		</div>
-		<div class="more-title-wrap bg-white">
-			<div class="p-3 bg-white d-flex justify-content-between align-items-center">
-				<div><span class="fw-bold pe-1">채민철</span>님</div>
-				<div>
-					<a class="btn btn-outline-secondary" href="">로그아웃</a>
-				</div>
-			</div>
-			<div class="d-flex justify-content-around pb-4 pt-3 px-2">
-				<div class="d-flex flex-column align-items-center">
-					<img src="img/more_icon1_1.png" alt="">
-					<span>공지사항</span>
-				</div>
-				<div class="d-flex flex-column align-items-center">
-					<img src="img/more_icon1_2.png" alt="">
-					<span>고객센터</span>
-				</div>
-				<div class="d-flex flex-column align-items-center">
-					<img src="img/more_icon1_3.png" alt="">
-					<span>인증센터</span>
-				</div>
-				<div class="d-flex flex-column align-items-center">
-					<img src="img/more_icon1_4.png" alt="">
-					<span>이용안내</span>
-				</div>
-			</div>
-		</div>
-		<div class="more-content-wrap bg-white">
-			<ul class="p-3 pt-4">
-				<li>
-					<a href="1.html">
-						<div><img src="img/more_icon2_1.png" alt=""></div>
-						<div>내 계좌 한눈에</div>
-					</a>
+		<div class="sub-card-wrap bg-white border-0">
+			<!-- Nav tabs -->
+			<ul class="nav nav-tabs" id="myTab" role="tablist">
+				<li class="nav-item" role="presentation">
+					<a class="nav-link py-3 active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
+						type="button" role="tab" aria-controls="home" aria-selected="true">게좌자동납부</a>
 				</li>
-				<li>
-					<a href="">
-						<div><img src="img/more_icon2_2.png" alt=""></div>
-						<div>내 계좌 지급정지</div>
-					</a>
+				<li class="nav-item" role="presentation">
+					<a ton class="nav-link py-3" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile"
+						type="button" role="tab" aria-controls="profile" aria-selected="false">계좌자동송금</a>
 				</li>
-				<li>
-					<a href="2.html">
-						<div><img src="img/more_icon2_3.png" alt=""></div>
-						<div>내 카드 한눈에</div>
-					</a>
-				</li>
-				<li>
-					<a href="">
-						<div><img src="img/more_icon2_4.png" alt=""></div>
-						<div>내 투자성향 한눈에</div>
-					</a>
-				</li>
-				<li>
-					<a href="4.html">
-						<div><img src="img/more_icon2_5.png" alt=""></div>
-						<div>내 자동이체 한눈에</div>
-					</a>
-				</li>
-				<li>
-					<a href="">
-						<div><img src="img/more_icon2_6.png" alt=""></div>
-						<div>내 오픈뱅킹 한눈에</div>
-					</a>
-				</li>
-				<li>
-					<a href="">
-						<div><img src="img/more_icon2_7.png" alt=""></div>
-						<div>내 보험 한눈에</div>
-					</a>
-				</li>
-				<li>
-					<a href="">
-						<div><img src="img/more_icon2_8.png" alt=""></div>
-						<div>내 대출 한눈에</div>
-					</a>
-				</li>
-				<li>
-					<a href="">
-						<div><img src="img/more_icon2_9.png" alt=""></div>
-						<div>ATM/지점 한눈에</div>
-					</a>
-				</li>
-				<li>
-					<a href="">
-						<div><img src="img/more_icon2_10.png" alt=""></div>
-						<div>처리결과조회</div>
-					</a>
-				</li>
-				<li>
-					<a href="">
-						<div><img src="img/more_icon2_11.png" alt=""></div>
-						<div>휴면예금/보험금 조회</div>
-					</a>
-				</li>
-				<li>
-					<a href="">
-						<div><img src="img/more_icon2_12.png" alt=""></div>
-						<div>휴면예금/보험금 조회</div>
-					</a>
+				<li class="nav-item" role="presentation">
+					<a class="nav-link py-3" id="messages-tab" data-bs-toggle="tab" data-bs-target="#messages"
+						type="button" role="tab" aria-controls="messages" aria-selected="false">카드자동납부</a>
 				</li>
 			</ul>
-		</div>
-		<div class="more-footer-wrap bg-light p-3">
-			<div>
-				<span>KFTC Family App</span>
-				<span>Ver. 2.2.2</span>
-			</div>
 
-			<div class="d-flex justify-content-around align-items-center py-3">
-				<div class="d-felx align-items-center">
-					<img src="img/more_icon3_1.png" alt="">
-					<span class="ps-2">모바일지로</span>
+			<!-- Tab panes -->
+			<div class="tab-content">
+				<div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+
+					<div>
+						<div class="date-wrap">
+							<div>조회기준일 : <span id="date"></span></div>
+						</div>
+						<div class="sub-card-wrap px-3 pt-4">
+							<div class="sub-card-service">
+								<div  class="d-flex align-items-center">
+									계좌 <span class="text-primary px-1">3</span>, 자동납부<span
+										class="text-primary px-1">3</span>
+								</div>
+								<div class="d-flex align-items-center">
+									계좌번호 마스킹 
+                                    <div class="form-check form-switch ms-2">
+                                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                                        <label class="form-check-label" for="flexSwitchCheckChecked"></label>
+                                      </div>
+								</div>
+							</div>
+							<div class="py-4 border-bottom">
+								<div class="row">
+									<div class="col-12">
+										<div class="border rounded p-3 px-4 text-primary text-center">분실 카드 한번에 신고하기 <i
+												class="arrow right border-primary"></i></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<ul class="m-0 p-0">
+							<li class="info-wrap border-bottom p-4">
+								<a href="">
+									<div class="">
+										<div><img class="pe-2" src="img/star.png" alt=""></div>
+										<div class=""><img src="img/kb.png" alt=""></div>
+										<div>KB국민카드 </div>
+									</div>
+									<div class="">
+										<span class="text-primary fs-2 fw-bolder px-2">1</span>건 <i
+											class="mx-2 arrow right"></i>
+									</div>
+								</a>
+							</li>
+							<li class="info-wrap border-bottom p-4">
+								<a href="">
+									<div class="">
+										<div><img class="pe-2" src="img/star.png" alt=""></div>
+										<div class=""><img src="img/kakao.png" alt=""></div>
+										<div>카카오 뱅크 </div>
+									</div>
+									<div class="">
+										<span class="text-primary fs-2 fw-bolder px-2">1</span>건 <i
+											class="mx-2 arrow right"></i>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
 				</div>
-				<div class="d-felx align-items-center">
-					<img src="img/more_icon3_2.png" alt="">
-					<span class="ps-2">뱅크페이</span>
+				<div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+					<div>
+						<div class="date-wrap">
+							<div>조회기준일 : <span id="date"></span></div>
+						</div>
+						<div class="none_pg">
+							<div>
+								<img src="img/no_pg.png" alt="">
+								<div>
+									조회된 제2금융권 계좌 <br />내역이 없습니다.
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab" tabindex="0">
+					<div>
+						<div class="date-wrap">
+							<div>조회기준일 : <span id="date"></span></div>
+						</div>
+						<div class="none_pg">
+							<div>
+								<img src="img/no_pg.png" alt="">
+								<div>
+									조회된 증권사 계좌 <br />내역이 없습니다.
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -192,8 +183,8 @@
 			<div><a href="1.html"><img src="img/nav_bottom/navbar_1.jpg" alt=""></a></div>
 			<div><a href="2.html"><img src="img/nav_bottom/navbar_2.jpg" alt=""></a></div>
 			<div><a href="3.html"><img src="img/nav_bottom/navbar_3.jpg" alt=""></a></div>
-			<div><a href="4.html"><img src="img/nav_bottom/navbar_4.jpg" alt=""></a></div>
-			<div><a href="5.html"><img src="img/nav_bottom/navbar_5_on.jpg" alt=""></a></div>
+			<div><a href="4.html"><img src="img/nav_bottom/navbar_4_on.jpg" alt=""></a></div>
+			<div><a href="5.html"><img src="img/nav_bottom/navbar_5.jpg" alt=""></a></div>
 		</div>
 	</div>
 </body>
