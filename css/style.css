@@ -239,7 +239,10 @@ div.mainbtn-wrap ul li a span {
     color: #303030;
     text-decoration: none;
     height: 3.5rem;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
+}
+.info-wrap > a .fs-2{
+    font-size: 1.2rem!important;
 }
 
 .info-wrap>a>div {
@@ -282,7 +285,7 @@ div.mainbtn-wrap ul li a span {
 .sub-card-wrap > .sub-card-service{
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
 }
 .sub-card-wrap > .sub-card-service > div:first-child{
     font-size: 1.2rem;;
@@ -293,6 +296,45 @@ div.mainbtn-wrap ul li a span {
 .sub-card-wrap > .sub-card-service > div> img{
     width: 1rem;
 }
+
+.more-title-wrap{
+    border-bottom:.4rem solid #f5f5f5;
+}
+.more-title-wrap > div:last-child img{
+    height: 1.6rem;
+    width: 1.6rem;
+    margin-bottom: 0.6rem;
+}
+.more-title-wrap > div:last-child span{
+    font-size:0.85rem;
+    color:#303030;
+}
+.more-content-wrap{}
+.more-content-wrap a{
+    color:#303030;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 0.8rem 0;
+}
+.more-content-wrap a img{
+    width: 2rem;
+    height: 2rem;
+    margin-right:1rem;
+}
+.more-footer-wrap{
+    margin-bottom:5rem
+}
+.more-footer-wrap div:last-child{}
+.more-footer-wrap div:last-child img{
+    width:2.5rem;
+    height:2.5rem;
+    border:1px solid #DFE2E6;
+    border-radius: .8rem;
+}
+
+
+
 
 .date-wrap {
     width: 100%;
@@ -394,6 +436,10 @@ div.mainbtn-wrap ul li a span {
     background-color: #6A8EE4;
     color: #fff;
 }
+.btn-outline-secondary {
+    border-color:#DFE2E6!important;
+    color: #fff;
+}
 
 .text-primary {
     color: #5778DF;
@@ -455,4 +501,12 @@ div.mainbtn-wrap ul li a span {
 .left {
     transform: rotate(135deg);
     -webkit-transform: rotate(135deg);
+}
+
+
+/* toggle 버튼 */
+
+.form-switch .form-check-input{
+    height: 2em;
+    width: 3em!important;
 }
