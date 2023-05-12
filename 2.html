@@ -37,7 +37,9 @@
 			let temp_html = `${year}-${month}-${date} `
 
 			console.log(temp_html);
-			$('#date').append(temp_html);
+			$('#date1').append(temp_html);
+			$('#date2').append(temp_html);
+			$('#date3').append(temp_html);
 
 			temp_html = ``
 
@@ -92,8 +94,18 @@
 
 					<div>
 						<div class="date-wrap">
-							<div>조회기준일 : <span id="date"></span></div>
+							<div>조회기준일 : <span id="date1"></span></div>
 						</div>
+						<div class="sub-card-wrap px-3 pt-4">
+							<div class="sub-card-service">
+								<div>
+									은행 <span class="text-primary px-1">2</span>, 계좌<span
+										class="text-primary px-1">5</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- 서브페이지 상단 버튼
 						<div class="px-4 py-3 border-bottom">
 							<div class="row">
 								<div class="col-6">
@@ -105,26 +117,26 @@
 											class="arrow right border-primary"></i></div>
 								</div>
 							</div>
-						</div>
+						</div> -->
 						<ul class="m-0 p-0">
 							<li class="info-wrap border-bottom p-4">
-								<a href="">
-									<div class="">
-										<div><img class="pe-2" src="img/star.png" alt=""></div>
-										<div class=""><img src="img/kb.png" alt=""></div>
-										<div>KB국민카드 </div>
+								<a href="2-kb.html">
+									<div class="logo-wrap">
+										<div class="star"><img class="pe-2" src="img/star.png" alt=""></div>
+										<div class="logo"><img src="img/kb.png" alt=""></div>
+										<div>국민은행 </div>
 									</div>
 									<div class="">
-										<span class="text-primary fs-2 fw-bolder px-2">1</span>건 <i
+										<span class="text-primary fs-2 fw-bolder px-2">4</span>건 <i
 											class="mx-2 arrow right"></i>
 									</div>
 								</a>
 							</li>
 							<li class="info-wrap border-bottom p-4">
-								<a href="">
-									<div class="">
-										<div><img class="pe-2" src="img/star.png" alt=""></div>
-										<div class=""><img src="img/kakao.png" alt=""></div>
+								<a href="2-kakao.html">
+									<div class="logo-wrap">
+										<div class="star"><img class="pe-2" src="img/star.png" alt=""></div>
+										<div class="logo"><img src="img/kakao.png" alt=""></div>
 										<div>카카오 뱅크 </div>
 									</div>
 									<div class="">
@@ -139,7 +151,7 @@
 				<div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
 					<div>
 						<div class="date-wrap">
-							<div>조회기준일 : <span id="date"></span></div>
+							<div>조회기준일 : <span id="date3"></span></div>
 						</div>
 						<div class="none_pg">
 							<div>
@@ -152,35 +164,63 @@
 					</div>
 				</div>
 				<div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab" tabindex="0">
-					<div>
-						<div class="date-wrap">
-							<div>조회기준일 : <span id="date"></span></div>
-						</div>
-						<div class="none_pg">
+
+					<div class="date-wrap">
+						<div>조회기준일 : <span id="date2"></span></div>
+					</div>
+					<div class="sub-card-wrap px-3 pt-4">
+						<div class="sub-card-service">
 							<div>
-								<img src="img/no_pg.png" alt="">
-								<div>
-									조회된 증권사 계좌 <br />내역이 없습니다.
-								</div>
+								기관 <span class="text-primary px-1">2</span>, 계좌<span class="text-primary px-1">3</span>
 							</div>
 						</div>
 					</div>
+					<ul class="m-0 p-0">
+						<li class="info-wrap border-bottom p-4">
+							<a href="2-kb-asset.html">
+								<div class="logo-wrap">
+									<div class="star"><img class="pe-2" src="img/star.png" alt=""></div>
+									<div class="logo"><img src="img/kb.png" alt=""></div>
+									<div>국민은행 </div>
+								</div>
+								<div class="">
+									<span class="text-primary fs-2 fw-bolder px-2">2</span>건 <i
+										class="mx-2 arrow right"></i>
+								</div>
+							</a>
+						</li>
+						<li class="info-wrap border-bottom p-4">
+							<a href="2-mirae-asset.html">
+								<div class="logo-wrap">
+									<div class="star"><img class="pe-2" src="img/star.png" alt=""></div>
+									<div class="logo"><img src="img/mirae.png" alt=""></div>
+									<div>미래에셋증권 </div>
+								</div>
+								<div class="">
+									<span class="text-primary fs-2 fw-bolder px-2">1</span>건 <i
+										class="mx-2 arrow right"></i>
+								</div>
+							</a>
+						</li>
+					</ul>
 				</div>
 			</div>
 		</div>
+	</div>
+	</div>
 
 
 
 
 
-		<!-- 하단 네비게이션 -->
-		<div class="bottom-nav">
-			<div><a href="1.html"><img src="img/nav_bottom/navbar_1.jpg" alt=""></a></div>
-			<div><a href="2.html"><img src="img/nav_bottom/navbar_2_on.jpg" alt=""></a></div>
-			<div><a href="3.html"><img src="img/nav_bottom/navbar_3.jpg" alt=""></a></div>
-			<div><a href="4.html"><img src="img/nav_bottom/navbar_4.jpg" alt=""></a></div>
-			<div><a href="5.html"><img src="img/nav_bottom/navbar_5.jpg" alt=""></a></div>
-		</div>
+	<!-- 하단 네비게이션 -->
+	<div class="bottom-nav">
+		<div><a href="1.html"><img src="img/nav_bottom/navbar_1.jpg" alt=""></a></div>
+		<div><a href="2.html"><img src="img/nav_bottom/navbar_2_on.jpg" alt=""></a></div>
+		<div><a href="3.html"><img src="img/nav_bottom/navbar_3.jpg" alt=""></a></div>
+		<div><a href="4.html"><img src="img/nav_bottom/navbar_4.jpg" alt=""></a></div>
+		<div><a href="5.html"><img src="img/nav_bottom/navbar_5.jpg" alt=""></a></div>
+	</div>
 	</div>
 </body>
 
