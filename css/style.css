@@ -60,8 +60,15 @@ html {
 }
 
 .bottom-desc{
-    border-top:2px solid #DEE1E5;
+    border-top:.6rem solid #DEE1E5;
     background: #f5f5f5;
+    margin-bottom:3.8rem;
+
+    padding:1.5rem;
+}
+.bottom-desc li{
+    padding:.5rem 0;
+    line-height:1.5;
 }
 .scrolldown {
     background-color: #f5f5f5 !important;
@@ -381,6 +388,8 @@ div.mainbtn-wrap ul li a span {
     padding: 4rem;
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: 36rem;
 }
 
 .none_pg>div {
@@ -442,9 +451,7 @@ div.mainbtn-wrap ul li a span {
 
 .btn {
     width: auto;
-    padding: 1rem;
-    border-radius: .6rem;
-    ;
+    padding: 0.5rem 1rem; 
 }
 
 .btn-primary {
@@ -460,10 +467,10 @@ div.mainbtn-wrap ul li a span {
     border-color: #5878DE;
 }
 
-.fo
-.text-primary {
+.text-primary,
+a.text-primary {
     color: #5778DF;
-
+    text-decoration: none;
 }
 
 .text-gray-300 {
@@ -529,4 +536,43 @@ div.mainbtn-wrap ul li a span {
 .form-switch .form-check-input{
     height: 2em;
     width: 3em!important;
+}
+
+
+/* 상세페이지 추가 */
+
+.top-container-sub{
+    width: 100%; 
+    box-sizing: border-box;
+    margin-top: 4rem;
+}
+
+/* modal CSS */
+
+.modal-content {
+    border-radius: 0.2rem;
+}
+.modal-body{
+    padding: 1.5rem 1.5rem 0 1.5rem;
+    line-height:1.5;
+}
+.modal-footer {
+    border-top: 0;
+    padding: 1rem 1.5rem 1.5rem 0;
+}
+
+.modal-dialog-bottom .modal-header button{
+    margin:0;
+}
+.modal-dialog-bottom .modal-header button:last-child{
+    width:32px;
+    --bs-btn-close-color: #fff;
+    --bs-btn-close-bg: none;
+}
+.modal-dialog-bottom .modal-content {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
 }
