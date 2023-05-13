@@ -37,7 +37,9 @@
 			let temp_html = `${year}-${month}-${date} `
 
 			console.log(temp_html);
-			$('#date').append(temp_html);
+			$('#date1').append(temp_html);
+			$('#date2').append(temp_html);
+			$('#date3').append(temp_html);
 
 			temp_html = ``
 
@@ -88,7 +90,7 @@
 
 					<div>
 						<div class="date-wrap">
-							<div>조회기준일 : <span id="date"></span></div>
+							<div>조회기준일 : <span id="date1"></span></div>
 						</div>
 						<div class="sub-card-wrap px-3 pt-4">
 							<div class="sub-card-service">
@@ -146,13 +148,13 @@
 				<div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
 					<div>
 						<div class="date-wrap">
-							<div>조회기준일 : <span id="date"></span></div>
+							<div>조회기준일 : <span id="date2"></span></div>
 						</div>
 						<div class="none_pg">
 							<div>
 								<img src="img/no_pg.png" alt="">
 								<div>
-									조회된 제2금융권 계좌 <br />내역이 없습니다.
+									조회된 계좌자동송금 <br />내역이 없습니다.
 								</div>
 							</div>
 						</div>
@@ -161,13 +163,13 @@
 				<div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab" tabindex="0">
 					<div>
 						<div class="date-wrap">
-							<div>조회기준일 : <span id="date"></span></div>
+							<div>조회기준일 : <span id="date3"></span></div>
 						</div>
 						<div class="none_pg">
 							<div>
 								<img src="img/no_pg.png" alt="">
 								<div>
-									조회된 증권사 계좌 <br />내역이 없습니다.
+									조회된 카드자동납부 <br />내역이 없습니다.
 								</div>
 							</div>
 						</div>
