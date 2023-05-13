@@ -40,6 +40,8 @@
 			$('#date').append(temp_html);
 
 			temp_html = ``
+			const myModalAlternative = new bootstrap.Modal('#atmModal', options)
+			const ModalAlternative = new bootstrap.Modal('#errorModal', options)
 
 
 		}); 
@@ -94,25 +96,25 @@
 		<div class="more-content-wrap bg-white">
 			<ul class="p-3 pt-4">
 				<li>
-					<a href="1.html">
+					<a href="2.html">
 						<div><img src="img/more_icon2_1.png" alt=""></div>
 						<div>내 계좌 한눈에</div>
 					</a>
 				</li>
 				<li>
-					<a href="">
+					<a href="" data-bs-toggle="modal" data-bs-target="#errorModal">
 						<div><img src="img/more_icon2_2.png" alt=""></div>
 						<div>내 계좌 지급정지</div>
 					</a>
 				</li>
 				<li>
-					<a href="2.html">
+					<a href="3.html">
 						<div><img src="img/more_icon2_3.png" alt=""></div>
 						<div>내 카드 한눈에</div>
 					</a>
 				</li>
 				<li>
-					<a href="">
+					<a href="" data-bs-toggle="modal" data-bs-target="#errorModal">
 						<div><img src="img/more_icon2_4.png" alt=""></div>
 						<div>내 투자성향 한눈에</div>
 					</a>
@@ -124,45 +126,45 @@
 					</a>
 				</li>
 				<li>
-					<a href="">
+					<a href="2.html">
 						<div><img src="img/more_icon2_6.png" alt=""></div>
 						<div>내 오픈뱅킹 한눈에</div>
 					</a>
 				</li>
 				<li>
-					<a href="">
+					<a href="" data-bs-toggle="modal" data-bs-target="#errorModal">
 						<div><img src="img/more_icon2_7.png" alt=""></div>
 						<div>내 보험 한눈에</div>
 					</a>
 				</li>
 				<li>
-					<a href="">
+					<a href="loan.html">
 						<div><img src="img/more_icon2_8.png" alt=""></div>
 						<div>내 대출 한눈에</div>
 					</a>
 				</li>
 				<li>
-					<a href="">
+					<a href="" data-bs-toggle="modal" data-bs-target="#atmModal">
 						<div><img src="img/more_icon2_9.png" alt=""></div>
 						<div>ATM/지점 한눈에</div>
 					</a>
 				</li>
 				<li>
-					<a href="">
+					<a href="" data-bs-toggle="modal" data-bs-target="#errorModal">
 						<div><img src="img/more_icon2_10.png" alt=""></div>
 						<div>처리결과조회</div>
 					</a>
 				</li>
 				<li>
-					<a href="">
+					<a href="deposit.html">
 						<div><img src="img/more_icon2_11.png" alt=""></div>
 						<div>휴면예금/보험금 조회</div>
 					</a>
 				</li>
 				<li>
-					<a href="">
+					<a href="" data-bs-toggle="modal" data-bs-target="#errorModal">
 						<div><img src="img/more_icon2_12.png" alt=""></div>
-						<div>휴면예금/보험금 조회</div>
+						<div>금융거래제보 제공사실 통보</div>
 					</a>
 				</li>
 			</ul>
@@ -194,6 +196,36 @@
 			<div><a href="3.html"><img src="img/nav_bottom/navbar_3.jpg" alt=""></a></div>
 			<div><a href="4.html"><img src="img/nav_bottom/navbar_4.jpg" alt=""></a></div>
 			<div><a href="5.html"><img src="img/nav_bottom/navbar_5_on.jpg" alt=""></a></div>
+		</div>
+	</div>
+
+
+
+	<!-- Modal -->
+	<div class="modal fade" id="atmModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-body">
+					<p class="fs-5 pb-2">ATM/지점 한눈에 서비스를 이용하기 위해서는 다음의 선택적 접근권한 동의가 필요합니다.</p>
+					<p class="fs-5 pb-2">- 위치(경도 및 위도) : 현재 위치를 가져오기 위해 필요</p>
+				</div>
+				<div class="modal-footer">
+					<a href="" class="fs-5 text-primary">확인</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="modal fade" id="errorModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-body">
+					<p class="fs-5 pb-2">yessign 오류(기타)(G802)</p> 
+				</div>
+				<div class="modal-footer">
+					<a href="" class="fs-5 text-primary">확인</a>
+				</div>
+			</div>
 		</div>
 	</div>
 </body>
