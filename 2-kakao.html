@@ -108,16 +108,16 @@
 			</div>
 		</div>
 		<div class="p-3 mb-5">
-			<a href="" class="d-block border rounded p-4 bg-light mb-3">
+			<a href="" class="d-block border rounded p-4 bg-light mb-3"  data-bs-toggle="modal" data-bs-target="#kakao-1">
 				<h5 class="pb-2">카카오뱅크 입출금통장<i class="arrow right border-secondary mb-1"></i></h5>
 				<span class="text-secondary">3333255568842</span>
 
-                <div class="d-flex justify-content-between pt-4">
+				<div class="d-flex justify-content-between pt-4">
 					<span class="text-primary">해지불가</span>
-                    <div class="d-flex align-items-center justify-content-end text-end">
-                        <h2 class="fw-bold pe-2">340,320</h2><span class="fs-4">원</span>
-                    </div>
-                </div> 
+					<div class="d-flex align-items-center justify-content-end text-end">
+						<h2 class="fw-bold pe-2">340,320</h2><span class="fs-4">원</span>
+					</div>
+				</div>
 			</a>
 		</div>
 	</div>
@@ -127,16 +127,65 @@
 	</div>
 
 
-
-
-	<!-- 하단 네비게이션 
-	<div class="bottom-nav">
-		<div><a href="1.html"><img src="img/nav_bottom/navbar_1.jpg" alt=""></a></div>
-		<div><a href="2.html"><img src="img/nav_bottom/navbar_2_on.jpg" alt=""></a></div>
-		<div><a href="3.html"><img src="img/nav_bottom/navbar_3.jpg" alt=""></a></div>
-		<div><a href="4.html"><img src="img/nav_bottom/navbar_4.jpg" alt=""></a></div>
-		<div><a href="5.html"><img src="img/nav_bottom/navbar_5.jpg" alt=""></a></div>
-	</div>-->
+	<!-- KB-4 -->
+	<div class="modal fade" id="kakao-1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-bottom">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					<h1 class="modal-title fs-5" id="exampleModalToggleLabel">계좌상세조회</h1>
+					<button type="button" class="btn-close text-white" data-bs-dismiss="modal"
+						aria-label="Close"></button>
+				</div>
+				<div class="modal-body p-0">
+					<div class="d-flex justify-content-end p-3 bg-light">
+						<div class="">조회 기준일 : <span id="date-kb-1"></span> </div>
+					</div>
+					<div class="p-3">
+						<div class="logo-wrap align-items-center">
+							<div class="logo ms-0"><img src="img/kb.png" alt=""></div>
+							<div>
+								<div class="fs-4">입출금 통장</div>
+								<span class="text-secondary">3333255568842</span>
+							</div>
+						</div>
+						<div class="d-flex align-items-center justify-content-end py-3 text-end">
+							<h1 class="fw-bold pe-2">340,320</h1><span class="fs-4">원</span>
+						</div>
+					</div>
+					<hr />
+					<ul class="p-3 border-bottom">
+						<li class="p-2 d-flex justify-content-between">
+							<div>지점명</div>
+							<div>테크노마트종합금융센터</div>
+						</li>
+						<li class="p-2 d-flex justify-content-between">
+							<div>연락처</div>
+							<div>1599-9999</div>
+						</li>
+						<li class="p-2 d-flex justify-content-between">
+							<div>개설일</div>
+							<div>2023-09-02</div>
+						</li>
+						<li class="p-2 d-flex justify-content-between">
+							<div>만기일</div>
+							<div></div>
+						</li>
+					</ul>
+					<div class="bottom-desc mb-0">
+						<ul>
+							<li>• 계좌에 연계된 자동납부 및 자동송금 내역은
+								<br> 08:00 ~ 24:00 에만 조회 가능합니다.
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="modal-footer bg-primary">
+					<a href="" class="fs-5 text-white text-center w-100">확인</a>
+				</div>
+			</div>
+		</div>
+	</div>
 	</div>
 </body>
 
