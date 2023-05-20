@@ -47,7 +47,30 @@
 
 			temp_html = ``
 
-			const myModalAlternative = new bootstrap.Modal('#kb-1', options)
+
+
+// 			let const element = document.getElementById('my_div');
+//   alert(element.innerHTML);
+// 			let kbAccount2 = $("#kb-account-2");
+// 			let kbAccount3 = $("#kb-account-3");
+// 			let kbAccount4 = $("#kb-account-4");
+
+// 			const arr = [kbAccount1, kbAccount2, kbAccount3, kbAccount4];
+// 			// const newArr = arr(Number);
+// 			console.log(arr);
+			
+// 			var sum = add(newArr);
+// 			console.log(newArr);
+
+// 			const result = newArr.reduce(function add(sum, currValue) {
+// 				return sum + currValue;
+// 			}, 0);
+
+// 			console.log(sum);
+
+// 			$('#kb-account-sum').append(sum);
+
+// 			sum=``;
 		}); 
 	</script>
 	<style>
@@ -76,7 +99,7 @@
 					<div class="text-light">조회 기준일 : <span id="date"></span> </div>
 				</div>
 				<div class="text-white d-flex align-items-center justify-content-end py-3 text-end">
-					<h1 class="pe-2">39,433,403</h1><span class="fs-4">원</span>
+					<h1 class="pe-2" id="kb-account-sum">44,743,392</h1><span class="fs-4">원</span>
 				</div>
 				<div class="row mb-2">
 					<div class="col-6">
@@ -108,7 +131,7 @@
 			</div>
 
 			<div class="d-flex align-items-center justify-content-end py-3 text-end">
-				<h1 class="fw-bold pe-2">39,433,403</h1><span class="fs-4">원</span>
+				<h1 class="fw-bold pe-2">44,743,392</h1><span class="fs-4">원</span>
 			</div>
 		</div>
 		<div class="p-3 mb-5">
@@ -119,7 +142,7 @@
 				<div class="d-flex justify-content-between pt-4">
 					<span class="text-primary">해지불가</span>
 					<div class="d-flex align-items-center justify-content-end text-end">
-						<h2 class="fw-bold pe-2">20,709,840 </h2><span class="fs-4">원</span>
+						<h2 class="fw-bold pe-2" id="kb-account-1">20,209,840 </h2><span class="fs-4">원</span>
 					</div>
 				</div>
 			</a>
@@ -130,7 +153,7 @@
 				<div class="d-flex justify-content-between pt-4">
 					<span class="text-primary">해지불가</span>
 					<div class="d-flex align-items-center justify-content-end text-end">
-						<h2 class="fw-bold pe-2">6,723,563</h2><span class="fs-4">원</span>
+						<h2 class="fw-bold pe-2" id="kb-account-2">12,533,552</h2><span class="fs-4">원</span>
 					</div>
 				</div>
 			</a>
@@ -141,7 +164,7 @@
 				<div class="d-flex justify-content-between pt-4">
 					<span class="text-primary">해지불가</span>
 					<div class="d-flex align-items-center justify-content-end text-end">
-						<h2 class="fw-bold pe-2">7,500,000</h2><span class="fs-4">원</span>
+						<h2 class="fw-bold pe-2" id="kb-account-3">7,500,000</h2><span class="fs-4">원</span>
 					</div>
 				</div>
 			</a>
@@ -152,7 +175,7 @@
 				<div class="d-flex justify-content-between pt-4">
 					<span class="text-primary">해지불가</span>
 					<div class="d-flex align-items-center justify-content-end text-end">
-						<h2 class="fw-bold pe-2">4,500,000</h2><span class="fs-4">원</span>
+						<h2 class="fw-bold pe-2" id="kb-account-4">4,500,000</h2><span class="fs-4">원</span>
 					</div>
 				</div>
 			</a>
