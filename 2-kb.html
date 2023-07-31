@@ -9,7 +9,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
 		crossorigin="anonymous"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -47,7 +47,31 @@
 
 			temp_html = ``
 
+			//amount 클래스 값의 자동 계산 함수 시작
+			calculateTotal();
 
+			function formatCurrency(amount) {
+				return amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+			}
+
+			function calculateTotal() {
+				const amountElements = document.querySelectorAll('.amount');
+				let total = 0;
+
+				amountElements.forEach((element) => {
+					const amountString = element.innerText.replace(/,/g, '');
+					const amount = parseInt(amountString);
+
+					if (!isNaN(amount) && amount >= 1000) {
+						total += amount;
+					}
+				});
+
+				document.getElementById('kb-total1').innerText = formatCurrency(total);
+				document.getElementById('kb-total2').innerText = formatCurrency(total);
+			}
+
+			//amount 클래스 값의 자동 계산 함수 끝
 		}); 
 	</script>
 	<style>
@@ -76,7 +100,7 @@
 					<div class="text-light">조회 기준일 : <span id="date"></span> </div>
 				</div>
 				<div class="text-white d-flex align-items-center justify-content-end py-3 text-end">
-					<h1 class="pe-2" id="kb-account-sum">44,360,759</h1><span class="fs-4">원</span>
+					<h1 class="pe-2" id="kb-total1"></h1><span class="fs-4">원</span>
 				</div>
 				<div class="row mb-2">
 					<div class="col-6">
@@ -108,7 +132,7 @@
 			</div>
 
 			<div class="d-flex align-items-center justify-content-end py-3 text-end">
-				<h1 class="fw-bold pe-2" id="kb-all-1">44,360,759</h1><span class="fs-4">원</span>
+				<h1 class="fw-bold pe-2" id="kb-total1"></h1><span class="fs-4">원</span>
 			</div>
 		</div>
 		<div class="p-3 mb-5">
@@ -119,7 +143,7 @@
 				<div class="d-flex justify-content-between pt-4">
 					<span class="text-primary">해지불가</span>
 					<div class="d-flex align-items-center justify-content-end text-end">
-						<h2 class="fw-bold pe-2" id="kb-account-1">26,238,223</h2><span class="fs-4">원</span>
+						<h2 class="fw-bold pe-2 amount" id="kb-account-1">26,238,223</h2><span class="fs-4">원</span>
 					</div>
 				</div>
 			</a>
@@ -130,7 +154,7 @@
 				<div class="d-flex justify-content-between pt-4">
 					<span class="text-primary">해지불가</span>
 					<div class="d-flex align-items-center justify-content-end text-end">
-						<h2 class="fw-bold pe-2" id="kb-account-2">4,922,536</h2><span class="fs-4">원</span>
+						<h2 class="fw-bold pe-2 amount" id="kb-account-2">4,922,536</h2><span class="fs-4">원</span>
 					</div>
 				</div>
 			</a>
@@ -141,7 +165,7 @@
 				<div class="d-flex justify-content-between pt-4">
 					<span class="text-primary">해지불가</span>
 					<div class="d-flex align-items-center justify-content-end text-end">
-						<h2 class="fw-bold pe-2" id="kb-account-3">8,500,000</h2><span class="fs-4">원</span>
+						<h2 class="fw-bold pe-2 amount" id="kb-account-3">8,500,000</h2><span class="fs-4">원</span>
 					</div>
 				</div>
 			</a>
@@ -152,7 +176,7 @@
 				<div class="d-flex justify-content-between pt-4">
 					<span class="text-primary">해지불가</span>
 					<div class="d-flex align-items-center justify-content-end text-end">
-						<h2 class="fw-bold pe-2" id="kb-account-4">4,700,000</h2><span class="fs-4">원</span>
+						<h2 class="fw-bold pe-2 amount" id="kb-account-4">4,700,000</h2><span class="fs-4">원</span>
 					</div>
 				</div>
 			</a>
