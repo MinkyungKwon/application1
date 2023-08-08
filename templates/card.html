@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+		crossorigin="anonymous"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/normal.css') }}" />
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+
+	<script>
+		$(document).ready(function () {
+			let today = new Date();
+
+			let year = today.getFullYear(); // 년도
+			let month = today.getMonth() + 1;  // 월
+			let date = today.getDate();  // 날짜 
+
+			let temp_html = `${year}년 ${month}월 ${date}일 `
+
+			console.log(temp_html);
+			$('#date1').append(temp_html);
+			$('#date2').append(temp_html);
+			$('#date3').append(temp_html);
+
+			temp_html = ``
+
+
+		}); 
+	</script>
+	<style>
+
+	</style>
+</head>
+
+<body>
+	<div class="main-container">
+		<div class="top-nav sub">
+			<div><img src="{{ url_for('static', filename='img/nav_top/navtop_1_scroll.jpg') }}" alt=""></div>
+			<div><img src="{{ url_for('static', filename='img/nav_top/navtop_3.jpg') }}" alt=""></div>
+		</div>
+		<div class="top-container">
+			<div class="p-3 bg-white">
+				<h1 class="sub">내 카드 한눈에</h1>
+			</div>
+		</div>
+		<div class="sub-card-wrap bg-white border-0">
+			<!-- Nav tabs -->
+			<ul class="nav nav-tabs" id="myTab" role="tablist">
+				<li class="nav-item" role="presentation">
+					<a class="nav-link py-3 active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
+						type="button" role="tab" aria-controls="home" aria-selected="true">카드</a>
+				</li>
+				<li class="nav-item" role="presentation">
+					<a ton class="nav-link py-3" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile"
+						type="button" role="tab" aria-controls="profile" aria-selected="false">포인트</a>
+				</li>
+				<li class="nav-item" role="presentation">
+					<a class="nav-link py-3" id="messages-tab" data-bs-toggle="tab" data-bs-target="#messages"
+						type="button" role="tab" aria-controls="messages" aria-selected="false">포인트현금화</a>
+				</li>
+			</ul>
+
+			<!-- Tab panes -->
+			<div class="tab-content">
+				<div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+
+					<div>
+						<div class="date-wrap">
+							<div>조회기준일 : <span id="date1"></span></div>
+						</div>
+						<div class="sub-card-wrap px-3 pt-4">
+							<div class="sub-card-service">
+								<div>
+									카드사 <span class="text-primary px-1">3</span>, 카드<span
+										class="text-primary px-1">3</span>
+								</div>
+								<div>
+									서비스 가능 카드사 <img src="{{ url_for('static', filename='img/info.png') }}" alt="">
+								</div>
+							</div>
+							<div class="py-4 border-bottom">
+								<div class="row">
+									<div class="col-12">
+										<div class="border rounded p-3 px-4 text-primary text-center">분실 카드 한번에 신고하기 <i
+												class="arrow right border-primary"></i></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<ul class="m-0 p-0">
+							<li class="info-wrap border-bottom p-4">
+								<a href="">
+									<div class="logo-wrap">
+										<div class="star"><img class="pe-2" src="{{ url_for('static', filename='img/star.png') }}" alt=""></div>
+										<div class="logo"><img src="{{ url_for('static', filename='img/kb.png') }}" alt=""></div>
+										<div>KB국민카드 </div>
+									</div>
+									<div class="">
+										<span class="text-primary fs-2 fw-bolder px-2">1</span>건 
+										<!-- <i class="mx-2 arrow right"></i> -->
+									</div>
+								</a>
+							</li>
+							<li class="info-wrap border-bottom p-4">
+								<a href="">
+									<div class="logo-wrap">
+										<div class="star"><img class="pe-2" src="{{ url_for('static', filename='img/star.png') }}" alt=""></div>
+										<div class="logo"><img src="{{ url_for('static', filename='img/lotte.png') }}" alt=""></div>
+										<div>롯데카드</div>
+									</div>
+									<div class="">
+										<span class="text-primary fs-2 fw-bolder px-2">1</span>건 
+										<!-- <i class="mx-2 arrow right"></i> -->
+									</div>
+								</a>
+							</li>
+							<li class="info-wrap border-bottom p-4">
+								<a href="">
+									<div class="logo-wrap">
+										<div class="star"><img class="pe-2" src="{{ url_for('static', filename='img/star.png') }}" alt=""></div>
+										<div class="logo"><img src="{{ url_for('static', filename='img/samsung.png') }}" alt=""></div>
+										<div>삼성카드</div>
+									</div>
+									<div class="">
+										<span class="text-primary fs-2 fw-bolder px-2">1</span>건 
+										<!-- <i class="mx-2 arrow right"></i> -->
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+					<div>
+						<div class="date-wrap">
+							<div>조회기준일 : <span id="date2"></span></div>
+						</div>
+						<div class="sub-card-wrap px-3 pt-4">
+							<div class="sub-card-service">
+								<div>
+									카드사 <span class="text-primary px-1">3</span>
+								</div>
+								<div>
+									조회가능 카드사 <img src="{{ url_for('static', filename='img/info.png') }}" alt="">
+								</div>
+							</div>
+							<div class="py-4 border-bottom">
+								<div class="row">
+									<div class="point-wrap">
+										<h3>
+											총 보유 포인트  <img src="{{ url_for('static', filename='img/info.png') }}" alt="">
+										</h3>
+										<h1 class="text-end">
+											<strong>5,032</strong><span class="fs-5 ps-2">P</span>
+										</h1>
+									</div>
+								</div>
+							</div>
+						</div>
+						<ul class="m-0 p-0">
+							<li class="info-wrap border-bottom p-4">
+								<a href="">
+									<div class="logo-wrap">
+										<div class="logo"><img src="{{ url_for('static', filename='img/kb.png') }}" alt=""></div>
+										<div>KB국민카드 </div>
+									</div>
+									<div class="d-flex align-items-center">
+										<span class="text-primary fs-2 fw-bolder px-2">4,546</span>
+										<span class="text-primary fs-5 ps-2">P</span>
+									</div>
+								</a>
+							</li>
+							<li class="info-wrap border-bottom p-4">
+								<a href="">
+									<div class="logo-wrap">
+										<div class="logo"><img src="{{ url_for('static', filename='img/lotte.png') }}" alt=""></div>
+										<div>롯데카드 </div>
+									</div>
+									<div class="d-flex align-items-center">
+										<span class="text-primary fs-2 fw-bolder px-2">468</span>
+										<span class="text-primary fs-5 ps-2">P</span>
+									</div>
+								</a>
+							</li>
+							<li class="info-wrap border-bottom p-4">
+								<a href="">
+									<div class="logo-wrap">
+										<div class="logo"><img src="{{ url_for('static', filename='img/samsung.png') }}" alt=""></div>
+										<div>삼성카드 </div>
+									</div>
+									<div class="d-flex align-items-center">
+										<span class="text-primary fs-2 fw-bolder px-2">0</span>
+										<span class="text-primary fs-5 ps-2">P</span>
+									</div>
+								</a>
+							</li>
+							
+						</ul>
+					</div>
+				</div>
+				<div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab" tabindex="0">
+					<div>
+						<div class="date-wrap">
+							<div>조회기준일 : <span id="date3"></span></div>
+						</div>
+						<div class="sub-card-wrap px-3 pt-4">
+							<div class="sub-card-service">
+								<div>
+									카드사 <span class="text-primary px-1">1</span>
+								</div>
+								<div>
+									서비스 대상 포인트<img src="{{ url_for('static', filename='img/info.png') }}" alt="">
+								</div>
+							</div>
+							<div class="py-4">
+								<div class="row">
+									<div class="point-wrap">
+										<h3>
+											총 현금화 가능 포인트  <img src="{{ url_for('static', filename='img/info.png') }}" alt="">
+										</h3>
+										<h1 class="text-end">
+											<strong>4,546</strong><span class="fs-5 ps-2">P</span>
+										</h1>
+									</div>
+								</div>
+							</div> 
+							<div class="pb-4 border-bottom">
+								<div class="row">
+									<div class="col-12">
+										<div class="border rounded p-3 px-4 text-primary text-center">한번에 신청하기
+											<i class="arrow right border-primary"></i></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<ul class="m-0 p-0">
+							<li class="info-wrap border-bottom p-4">
+								<a href="">
+									<div class="logo-wrap">
+										<div class="logo"><img src="{{ url_for('static', filename='img/kb.png') }}" alt=""></div>
+										<div>KB국민카드 </div>
+									</div>
+									<div class="d-flex align-items-center">
+										<span class="text-primary fs-2 fw-bolder px-2">4,546</span>
+										<span class="text-primary fs-5 ps-2">P</span>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- 하단 네비게이션 -->
+		<div class="bottom-nav">
+			<div><a href="mainpg.html"><img src="{{ url_for('static', filename='img/nav_bottom/navbar_1.jpg') }}" alt=""></a></div>
+			<div><a href="account.html"><img src="{{ url_for('static', filename='img/nav_bottom/navbar_2.jpg') }}" alt=""></a></div>
+			<div><a href="card.html"><img src="{{ url_for('static', filename='img/nav_bottom/navbar_3_on.jpg') }}" alt=""></a></div>
+			<div><a href="directdebit.html"><img src="{{ url_for('static', filename='img/nav_bottom/navbar_4.jpg') }}" alt=""></a></div>
+			<div><a href="more.html"><img src="{{ url_for('static', filename='img/nav_bottom/navbar_5.jpg') }}" alt=""></a></div>
+		</div>
+	</div>
+</body>
+
+</html>
